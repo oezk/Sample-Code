@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+  <meta name="author" content="Omera Ezike">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BufferUnderrun- Login</title>
+    <style>
+      body {
+	  font-family: verdana, helvetica, sans-serif;
+        background-color: #EEE;
+        margin: 20px auto;
+        max-width: 700px;
+        font-size: 18px;
+        color: #444;
+        padding: 0 10px
+      }
+
+      /* Buttons */
+      button {
+        font-family: courier;
+        font-size: 14px;
+        padding: 8px 22px;
+        border: 2px solid #949292;
+        border-radius: 9px;
+        text-align: center;
+      }
+
+      /* Removes the focus box on click*/
+      button:focus {
+        outline: 0;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      /* Modal Background*/
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #474e5d;
+        padding-top: 50px;
+      }
+
+      /* Modal Box*/
+      .modal-content {
+        background-color: #EEE;
+        margin: 5% auto 15% auto;
+        border: 3px solid #888;
+        width: 25%;
+      }
+      
+	  input[type=text]:focus,
+      input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to BufferUnderrun</h1>
+    <em style="font-size:75%">Like Stack Overflow, but users take much longer to respond</em>
+    <br>
+    <button onclick="document.getElementById('modalLogin').style.display='block'" style="margin-top:15px;">Login</button>
+
+    <div id="modalLogin" class="modal">
+      <form class="modal-content" action="www.bufferunderrun.com/Auth/Logon">
+        <div class="container" style="margin-left: 20px";>
+          <p>
+            <label for="user"><b>Username</b></label>
+            <br>
+            <input type="text" placeholder="Username" name="user" required>
+            <br>
+            <label for="pass"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Password" name="pass" required>
+            <br>
+            <button style="margin-top:15px; margin-bottom:15px" type="submit">Login</button>
+            <button onclick="document.getElementById('modalLogin').style.display='block'" style="width:auto;">Forgot Password</button>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      var modal = document.getElementById('modalLogin');
+
+      /* Close login window when clicked out of*/
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+  </body>
+</html>
