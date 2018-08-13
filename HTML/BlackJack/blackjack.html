@@ -1,0 +1,43 @@
+<!-- BlackJack JS by Omera Ezike -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Blackjack JS</title>
+<style>
+body {
+	background-color: gainsboro;
+}
+
+.box {
+    float: left;
+    width: 20%;
+}
+
+</style>
+</head>
+<body>
+	<h4 id="title">Blackjack JS</h4>
+<div>
+	<span>
+		<button id="btnNewGame">New Game</button>
+		<button id="btnHit" style="display: none">Hit</button>
+		<button id="btnStay" style="display: none">Stay</button>
+	</span>
+	</div>
+	<div class = "box" id="playerArea" style="display: none">
+		<p>Player has:</p>
+		<p id="playerHand"></p>
+		<p id="playerScore"></p>
+		<h3 id="endMsg"></h3>
+	</div>
+	
+	<div class = "box" id="compArea" style="display: none">
+		<p>Dealer has:</p>
+		<p id="dealerHand"></p>
+		<p id="dealerScore"></p>
+	</div>
+	<script src="blackjack.js"></script>
+</body>
+</html>
