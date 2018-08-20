@@ -1,0 +1,54 @@
+body {
+	width: 40%
+}
+
+.box {
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+	width: 50%"
+}
+
+.btnSubmit {
+	border: none;
+	color: black;
+	padding: 10px 27px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.g-recaptcha {
+	padding: 10px 0;
+}
+
+input {
+	display: table-cell;
+	font-size: 14px;
+}
+
+input:not (:placeholder-shown ):invalid {
+	background-color: #ffdddd;
+}
+
+label {
+	padding-bottom: 15px;
+	padding-right: 10px;
+	display: table-cell;
+}
+
+.output {
+	padding: 3px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+p {
+	display: table-row;
+}
+
+pre {
+	width: 100%
+}

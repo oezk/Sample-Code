@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Validation</title>
+<link rel="stylesheet" href="style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body id="body">
+	<div class="box">
+		<p>Address Validation</p>
+		<br>
+		<form id="formAddress" onsubmit="return false" autocomplete="off">
+			<p>
+				<label for="fname">First Name:</label> <input id="fname"
+					name="fname" type="text" maxlength="20" pattern="[A-Za-z]+"
+					placeholder="First Name" required autofocus></input>
+			</p>
+
+			<p>
+				<label for="lname">Last Name:</label> <input id="lname" name="lname"
+					type="text" maxlength="20" pattern="[A-Za-z]+"
+					placeholder="Last Name" required></input>
+			</p>
+
+			<p>
+				<label for="addressA">Address Line 1:</label> <input id="addressA"
+					name="addressA" type="text" maxlength="30" placeholder="Address"
+					required></input>
+			</p>
+
+			<p>
+				<label for="addressB">Address Line 2:</label> <input id="addressB"
+					name="addressB" type="text" maxlength="30" placeholder="Apt #"></input>
+			</p>
+
+			<p>
+				<label for="city">City:</label> <input id="city" name="city"
+					type="text" maxlength="30" pattern="[A-Za-z]+" required
+					placeholder="City"></input>
+			</p>
+
+			<p>
+				<label for="state">State:</label> <input id="state" name="state"
+					type="text" maxlength="20" pattern="[A-Za-z]+" placeholder="State"
+					required></input>
+			</p>
+
+			<p>
+				<label for="zipCode">ZipCode:</label> <input id="zipCode"
+					name="zipcode" type="text" maxlength="5" placeholder="ZipCode"
+					pattern="[0-9]{5}"
+					oninvalid="this.setCustomValidity('Please enter a five digit zip code')"
+					oninput="this.setCustomValidity('')" required></input>
+			</p>
+			<p>
+				<label for="country">Country:</label> <input id="country"
+					name="country" type="text" maxlength="3" pattern="[A-Za-z]{3}"
+					placeholder="Ex: USA"
+					oninvalid="this.setCustomValidity('Please enter a three character country code')"
+					oninput="this.setCustomValidity('')" required></input>
+			</p>
+			<p>
+				<label for="phone">Phone number:</label> <input id="phone"
+					class="phone" name="phone" type="text" maxlength="12"
+					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: xxx-xxx-xxxx"
+					oninvalid="this.setCustomValidity('Please follow the format: xxx-xxx-xxx')"
+					oninput="this.setCustomValidity('')" required></input>
+			</p>
+			<input id="submit2" class="btnSubmit" type="submit" value="Submit"></input>
+		</form>
+	</div>
+	<br>
+	<div class="box">
+		<p>New Account Validation</p>
+		<br>
+		<form id="formValidation" onsubmit="return false" autocomplete="off">
+			<p>
+				<label for="email">Email:</label> <input id="email" name="email"
+					type="email" maxlength="254" placeholder="Email" required></input>
+			</p>
+
+			<p>
+				<label for="username">Username:</label> <input id="username"
+					name="username" type="text" minlength=5 maxlength="20"
+					placeholder="Username" required></input>
+			</p>
+
+			<p>
+				<label for="password">Password:</label> <input id="password"
+					name="password" type="password" maxlength="20"
+					placeholder="Password" required></input>
+			</p>
+
+			<p>
+				<label for="confirmPass">Verify Password:</label> <input
+					id="confirmPass" type="password" maxlength="20"
+					placeholder="Password" required></input>
+			</p>
+
+			<div class="g-recaptcha"
+				data-sitekey="6Lcq6GoUAAAAAG7DHwDDj_j3rT0NwyZ1_0dbL5G9"></div>
+			<input id="submit" class="btnSubmit" type="submit" value="Submit"></input>
+		</form>
+	</div>
+
+	<br>
+	<div class="box">
+		<p>JSON</p>
+		<p id="output" class="output"></p>
+	</div>
+
+	<script src="app.js"></script>
+	<!-- <script src="handleJSON.js"></script> -->
+
+</body>
+</html>
